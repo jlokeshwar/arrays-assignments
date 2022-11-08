@@ -1,0 +1,27 @@
+// sum of all array elements usings recursion. 
+#include <stdio.h>
+#define size 5     //by using macros defining array size 5
+
+int sumfun(int a[],int l); //function declaration
+
+
+int main()  
+{
+    int a[size];  // array declaration of length size
+    printf("enter the elements into arrays :");
+    for(int i=0;i<size;i++)
+    scanf("%d",&a[i]); // taking array elements from user
+    
+    
+    printf("sum = %d\n",sumfun(a,size));//calling sum function
+    return 0;
+    
+}
+
+int sumfun(int a[],int l) 
+{
+    if(l<=0)
+    return 0;
+    
+    return sumfun(a,(l-1))+a[l-1];  // calling sum function recursivly
+}
