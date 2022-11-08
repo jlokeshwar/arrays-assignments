@@ -1,0 +1,29 @@
+#include<stdio.h> 
+#define size 5
+
+
+int main()    
+{    
+int arr[size];
+
+printf("Enter the elements into array:\n" );
+
+for(int i=0;i<size;i++)
+scanf("%d",&arr[i]);
+
+int max=arr[0];
+    int second_max=0;
+    for(int i=1;i<size;i++)
+    {
+        if(max<arr[i])
+        {
+            second_max=max;
+            max=arr[i];
+        }
+        else if(arr[i]>second_max && arr[i]<max)
+            second_max=arr[i];
+    }
+printf("second_max=%d\n",second_max);
+
+return 0;
+}
