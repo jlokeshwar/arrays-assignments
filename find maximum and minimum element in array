@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define size 5     
+
+
+int main()  
+{
+    int a[size],min,max;  
+    printf("enter the elements into arrays :");
+    
+    for(int i=0;i<size;i++)
+    scanf("%d",&a[i]); 
+    
+    min=max=a[0];
+    for(int i=1;i<size;i++)
+    {
+        if(min>a[i])
+        min=a[i];
+    }
+    for(int i=1;i<size;i++){
+             if(max<a[i])
+             max=a[i];
+    }         
+    printf("minimuim element = %d\n",min);
+     printf("maximuim element = %d\n",max);
+    return 0;
+    
+}
